@@ -4,8 +4,8 @@ const historyModel = new schema({
     username:{
         type:String
     },
-    date:{
-        type:Date,
+    dateText:{
+        type:String,
     },
     survivalTime:{
         type:String,
