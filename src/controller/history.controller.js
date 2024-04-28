@@ -4,7 +4,7 @@ class HistoryController{
         try{
             const {username} = req.params;
             const histories = await History.find({username:username}).sort('-createdAt');
-            return res.status(200).json({histories});
+            return res.status(200).json([...histories]);
         }
         catch(err){
             return res.status(500).json({msg:err.toString()});
