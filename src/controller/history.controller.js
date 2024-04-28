@@ -18,7 +18,7 @@ class HistoryController{
                 username,
                 survivalTime,
                 point,
-                date:new Date()
+                date:new Date().toLocaleDateString('en-US', { timeZone: 'Asia/Ho_Chi_Minh' })
             });
             await history.save();
             return res.status(200).json({msg:"Tạo thành công history"});
